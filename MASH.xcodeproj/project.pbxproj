@@ -404,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MASH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ada.MASH;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada.MASH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -415,7 +415,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MASH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ada.MASH;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada.MASH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -487,6 +487,7 @@
 				BD864EED1BEBE69200614508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD864EEE1BEBE69200614508 /* Build configuration list for PBXNativeTarget "MASHTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +496,7 @@
 				BD864EF01BEBE69200614508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD864EF11BEBE69200614508 /* Build configuration list for PBXNativeTarget "MASHUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +505,7 @@
 				BD864EF31BEBE69200614508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
