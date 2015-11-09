@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		91A5AD9A1BED560C00B1CF8D /* KeychainWrapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 91A5AD991BED560C00B1CF8D /* KeychainWrapper.m */; };
 		BD864EC71BEBE69200614508 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD864EC61BEBE69200614508 /* AppDelegate.swift */; };
 		BD864EC91BEBE69200614508 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD864EC81BEBE69200614508 /* ViewController.swift */; };
 		BD864ECC1BEBE69200614508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD864ECA1BEBE69200614508 /* Main.storyboard */; };
@@ -34,6 +35,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91A5AD971BED560B00B1CF8D /* MASH-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MASH-Bridging-Header.h"; sourceTree = "<group>"; };
+		91A5AD981BED560C00B1CF8D /* KeychainWrapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KeychainWrapper.h; sourceTree = "<group>"; };
+		91A5AD991BED560C00B1CF8D /* KeychainWrapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = KeychainWrapper.m; sourceTree = "<group>"; };
 		BD864EC31BEBE69200614508 /* MASH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MASH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD864EC61BEBE69200614508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD864EC81BEBE69200614508 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -99,10 +103,13 @@
 			children = (
 				BD864EC61BEBE69200614508 /* AppDelegate.swift */,
 				BD864EC81BEBE69200614508 /* ViewController.swift */,
+				91A5AD981BED560C00B1CF8D /* KeychainWrapper.h */,
+				91A5AD991BED560C00B1CF8D /* KeychainWrapper.m */,
 				BD864ECA1BEBE69200614508 /* Main.storyboard */,
 				BD864ECD1BEBE69200614508 /* Assets.xcassets */,
 				BD864ECF1BEBE69200614508 /* LaunchScreen.storyboard */,
 				BD864ED21BEBE69200614508 /* Info.plist */,
+				91A5AD971BED560B00B1CF8D /* MASH-Bridging-Header.h */,
 			);
 			path = MASH;
 			sourceTree = "<group>";
@@ -259,6 +266,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				91A5AD9A1BED560C00B1CF8D /* KeychainWrapper.m in Sources */,
 				BD864EC91BEBE69200614508 /* ViewController.swift in Sources */,
 				BD864EC71BEBE69200614508 /* AppDelegate.swift in Sources */,
 			);
@@ -402,10 +410,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MASH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ada.MASH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MASH/MASH-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -413,10 +424,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MASH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = ada.MASH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "MASH/MASH-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -487,6 +500,7 @@
 				BD864EED1BEBE69200614508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD864EEE1BEBE69200614508 /* Build configuration list for PBXNativeTarget "MASHTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +509,7 @@
 				BD864EF01BEBE69200614508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD864EF11BEBE69200614508 /* Build configuration list for PBXNativeTarget "MASHUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +518,7 @@
 				BD864EF31BEBE69200614508 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
