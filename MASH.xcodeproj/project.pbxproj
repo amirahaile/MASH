@@ -413,7 +413,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MASH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ada.MASH;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada.MASH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MASH/MASH-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -427,7 +427,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = MASH/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = ada.MASH;
+				PRODUCT_BUNDLE_IDENTIFIER = com.ada.MASH;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "MASH/MASH-Bridging-Header.h";
 			};
