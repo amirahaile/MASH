@@ -10,16 +10,32 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
    
+    // Labels
+    @IBOutlet weak var rightLabel: UILabel!
+    @IBOutlet weak var bottomLabel: UILabel!
+    @IBOutlet weak var leftLabel: UILabel!
+
     
-    @IBOutlet weak var languages: UILabel!
+    // Text fields
+    @IBOutlet weak var rInputOne: UITextField!
+    @IBOutlet weak var rInputTwo: UITextField!
+    @IBOutlet weak var rInputThree: UITextField!
+    @IBOutlet weak var rInputFour: UITextField!
+    
+    @IBOutlet weak var bInputOne: UITextField!
+    @IBOutlet weak var bInputTwo: UITextField!
+    @IBOutlet weak var bInputThree: UITextField!
+    @IBOutlet weak var bInputFour: UITextField!
     
     @IBOutlet weak var lInputOne: UITextField!
-    
     @IBOutlet weak var lInputTwo: UITextField!
-    
     @IBOutlet weak var lInputThree: UITextField!
-
     @IBOutlet weak var lInputFour: UITextField!
+    
+    // Magic number
+    @IBOutlet weak var magicNum: UIButton!
+    
+    
 
     let dot : UIView = UIView()
 
@@ -51,8 +67,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         debugPrint(textField.text)
     }
     
+    // Traditional mode
     func changeLabels() {
-        self.languages.text = "Crushes"
+        self.rightLabel.text = "Cars"
+        self.bottomLabel.text = "Kids"
+        self.leftLabel.text = "Crushes"
     }
 
 }
