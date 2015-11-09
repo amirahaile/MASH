@@ -13,7 +13,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var languages: UILabel!
     
-    @IBOutlet weak var lInputOne: UITextField!
+    @IBOutlet weak var lInputOne: UITextField! = UITextField()
     
     @IBOutlet weak var lInputTwo: UITextField!
     
@@ -51,8 +51,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         debugPrint(textField.text)
     }
     
-    func changeLabels() {
-        self.languages.text = "Crushes"
+    func changeLabels(labelName: String) {
+        self.lInputOne.text = labelName
     }
 
 }

@@ -12,7 +12,7 @@
 		BD864ECC1BEBE69200614508 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD864ECA1BEBE69200614508 /* Main.storyboard */; };
 		BD864ECE1BEBE69200614508 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD864ECD1BEBE69200614508 /* Assets.xcassets */; };
 		BD864ED11BEBE69200614508 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD864ECF1BEBE69200614508 /* LaunchScreen.storyboard */; };
-		BD864EDC1BEBE69200614508 /* MASHTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD864EDB1BEBE69200614508 /* MASHTests.swift */; };
+		BD864EDC1BEBE69200614508 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD864EDB1BEBE69200614508 /* ViewControllerTests.swift */; };
 		BD864EE71BEBE69200614508 /* MASHUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD864EE61BEBE69200614508 /* MASHUITests.swift */; };
 /* End PBXBuildFile section */
 
@@ -42,7 +42,7 @@
 		BD864ED01BEBE69200614508 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BD864ED21BEBE69200614508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD864ED71BEBE69200614508 /* MASHTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MASHTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		BD864EDB1BEBE69200614508 /* MASHTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MASHTests.swift; sourceTree = "<group>"; };
+		BD864EDB1BEBE69200614508 /* ViewControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 		BD864EDD1BEBE69200614508 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BD864EE21BEBE69200614508 /* MASHUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MASHUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD864EE61BEBE69200614508 /* MASHUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MASHUITests.swift; sourceTree = "<group>"; };
@@ -110,7 +110,7 @@
 		BD864EDA1BEBE69200614508 /* MASHTests */ = {
 			isa = PBXGroup;
 			children = (
-				BD864EDB1BEBE69200614508 /* MASHTests.swift */,
+				BD864EDB1BEBE69200614508 /* ViewControllerTests.swift */,
 				BD864EDD1BEBE69200614508 /* Info.plist */,
 			);
 			path = MASHTests;
@@ -268,7 +268,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD864EDC1BEBE69200614508 /* MASHTests.swift in Sources */,
+				BD864EDC1BEBE69200614508 /* ViewControllerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
