@@ -33,12 +33,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lInputFour: UITextField!
     
     // Magic number
-    @IBOutlet weak var magicNum: UIButton!
-    
-    
+    @IBOutlet weak var magicNumBtn: UIButton!
+    var magicNum: Int = 0
+    var findingMagicNum: Bool = false
 
     let dot : UIView = UIView()
+    var timer: NSTimer?
 
+    
+    // METHODS //
     
     func configDot() {
         self.dot.translatesAutoresizingMaskIntoConstraints = false
@@ -73,6 +76,28 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.bottomLabel.text = "Kids"
         self.leftLabel.text = "Crushes"
     }
+    
+    
+    // Magic Number functionality
+    
+    @IBAction func didStartRandomizeMagicNum(sender: AnyObject) {
+        createTimerForRandomNum()
+    }
+
+    @IBAction func stopRandomizeMagicNum(sender: AnyObject) {
+        self.timer?.invalidate()
+    }
+    
+    func createTimerForRandomNum() {
+        timer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "setRandomNumber", userInfo: nil, repeats: true)
+    }
+    
+    func setRandomNumber() {
+        magicNum = Int(arc4random_uniform(8)) + 1
+        self.magicNumBtn.setTitle(String(magicNum), forState: .Normal)
+    }
+
+    
 
 }
 

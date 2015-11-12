@@ -155,9 +155,13 @@
                                         <real key="value" value="0.5"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="didStartRandomizeMagicNum:" destination="BYZ-38-t0r" eventType="touchDown" id="xWe-4m-pfU"/>
+                                    <action selector="stopRandomizeMagicNum:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XNS-bQ-gTV"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="The Developer Version" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Yl-vy-IIU">
-                                <rect key="frame" x="196" y="55" width="174" height="21"/>
+                                <rect key="frame" x="196" y="53" width="174" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -177,7 +181,7 @@
                         <outlet property="lInputThree" destination="U5q-TC-lhS" id="aUy-xn-hve"/>
                         <outlet property="lInputTwo" destination="oT6-GF-Ok3" id="F8y-qz-ONN"/>
                         <outlet property="leftLabel" destination="9NG-7f-n5o" id="SeE-W3-Wqd"/>
-                        <outlet property="magicNum" destination="blM-Go-Ash" id="Csh-05-09E"/>
+                        <outlet property="magicNumBtn" destination="blM-Go-Ash" id="3TW-VB-kzr"/>
                         <outlet property="rInputFour" destination="Bg9-lv-5J2" id="29d-8I-QGH"/>
                         <outlet property="rInputOne" destination="yob-IY-wjC" id="wf3-Ck-fO7"/>
                         <outlet property="rInputThree" destination="2FW-hK-Nno" id="Wci-6D-p9A"/>
