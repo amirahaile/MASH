@@ -79,7 +79,7 @@ class GameViewController: UIViewController, UITextFieldDelegate {
     @IBAction func magicNum(sender: AnyObject) {
         UIView.animateWithDuration(2.0, animations: {
             self.dot.backgroundColor = UIColor.blackColor()
-            self.dot.frame = CGRect(x: self.lInputTwo.frame.origin.x, y: self.lInputTwo.frame.origin.y, width: 25, height: 25)
+            self.dot.frame = CGRect(x: self.lInputTwo.frame.origin.x + (self.lInputTwo.frame.width), y: self.lInputTwo.frame.origin.y, width: 25, height: 25)
         })
     }
 
