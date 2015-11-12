@@ -68,20 +68,36 @@ class GameViewController: UIViewController, UITextFieldDelegate {
         debugPrint(textField.text)
     }
     
-    func changeLabels() {
-        self.leftLabel.text = "Crushes"
-       
-//        
-//        self.bottomLabel.text = "# of kids"
-//        self.rightLabel.text = "Cars"
-    }
     
     @IBAction func magicNum(sender: AnyObject) {
-        UIView.animateWithDuration(2.0, animations: {
-            self.dot.backgroundColor = UIColor.blackColor()
-            self.dot.frame = CGRect(x: self.lInputTwo.frame.origin.x + (self.lInputTwo.frame.width), y: self.lInputTwo.frame.origin.y, width: 25, height: 25)
+        UIView.animateWithDuration(1.0, animations: {
+            self.dot.frame = CGRect(x: self.lInputTwo.frame.origin.x + (self.lInputTwo.frame.width + 10), y: self.lInputTwo.frame.origin.y, width: 25, height: 25)
         })
+
+        UIView.animateWithDuration(1.0, animations: {
+            self.dot.frame = CGRect(x: self.lInputThree.frame.origin.x + (self.lInputThree.frame.width + 10), y: self.lInputThree.frame.origin.y, width: 25, height: 25)
+        })
+
+        
+//        COMBINE LIST OF ANIMATIONS - DON'T KNOW HOW TO FIX ERRORS
+//        UIView.animateWithDuration(1.0, delay: 0.2, options: UIViewAnimationOptions .TransitionNone, animations: {
+//            [UIView .addKeyframeWithRelativeStartTime(0.0, relativeDuration: 1.0, animations: {     self.dot.frame = CGRect(x: self.lInputTwo.frame.origin.x + (self.lInputTwo.frame.width + 10), y: self.lInputTwo.frame.origin.y, width: 25, height: 25)
+//            })];
+//            [UIView .addKeyframeWithRelativeStartTime(0.0, relativeDuration: 1.0, animations: {     self.dot.frame = CGRect(x: self.lInputThree.frame.origin.x + (self.lInputThree.frame.width + 10), y: self.lInputThree.frame.origin.y, width: 25, height: 25)
+//            })]
+//        }, completion: ((true)->void))
+        
+        
+//        FAILS TO CREATE PATH
+//        var myPath:CGMutablePath = CGPathCreateMutable()
+//        CGPathMoveToPoint(myPath, nil, self.lInputTwo.frame.origin.x + (self.lInputTwo.frame.width + 10), self.lInputTwo.frame.origin.y)
+//
+//        CGPathAddLineToPoint(myPath, nil, self.lInputTwo.frame.origin.x, self.lInputTwo.frame.origin.y)
+
     }
+    
+
+    
 
 }
 

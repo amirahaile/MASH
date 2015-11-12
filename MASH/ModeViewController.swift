@@ -27,7 +27,7 @@ class ModeViewController: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "traditionalModeButton" {
             let modeController = segue.destinationViewController as! GameViewController
-            modeController.changeLabels()
+//            modeController.changeLabels()
         }
     }
 
