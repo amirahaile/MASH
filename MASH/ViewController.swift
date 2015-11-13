@@ -130,6 +130,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func highlightCount() {
+        if indexCount == self.elements.count { indexCount = 0 }
         currentElement = self.elements[indexCount]
         highlightElement(currentElement!)
         if previousElement != nil && self.elements.contains(previousElement!) {
