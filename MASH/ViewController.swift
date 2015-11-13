@@ -36,6 +36,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lInputThree: UITextField!
     @IBOutlet weak var lInputFour: UITextField!
     
+    // Elements Array
+    var elements = [UIView]()
+    
     // Magic number
     @IBOutlet weak var magicNumBtn: UIButton!
     var magicNum: Int = 0
@@ -43,7 +46,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     let dot : UIView = UIView()
     var timer: NSTimer?
-
+    var highlightTimer: NSTimer?
+    var currentElement: UIView?
+    var previousElement: UIView?
+    var indexCount: Int = 0
     
     // METHODS //
     
@@ -66,7 +72,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.lInputOne.delegate = self
-        configDot()
+        self.configDot()
+        self.createInputArray()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -90,7 +97,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func stopRandomizeMagicNum(sender: AnyObject) {
         self.timer?.invalidate()
-        highlightStartingPosition()
+        createTimerForHighlighting()
     }
     
     func createTimerForRandomNum() {
@@ -103,12 +110,35 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     
-    func highlightStartingPosition() {
-        mashM.layer.borderColor = UIColor.blueColor().CGColor
-        mashM.layer.borderWidth = 2.0
-    }
+    func highlightElement(element : UIView) {
+        element.layer.borderColor = UIColor.blueColor().CGColor
+        element.layer.borderWidth = 2.0
 
+    }
     
+    func unhighlightElement(element : UIView) {
+        element.layer.borderWidth = 0.0
+    }
+    
+    func createInputArray() {
+        self.elements = [mashM, mashA, mashS, mashH, rInputOne, rInputTwo, rInputThree, rInputFour, bInputOne, bInputTwo, bInputThree, bInputFour, lInputOne, lInputTwo, lInputThree, lInputFour]
+    }
+    
+    func createTimerForHighlighting() {
+        indexCount = 0
+        highlightTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "highlightCount", userInfo: nil, repeats: true)
+    }
+    
+    func highlightCount() {
+        currentElement = self.elements[indexCount]
+        highlightElement(currentElement!)
+        if previousElement != nil { unhighlightElement(previousElement!)}
+        previousElement = currentElement
+        if indexCount == magicNum - 1 {
+            highlightTimer?.invalidate()
+        }
+        indexCount++
+    }
 
 }
 
