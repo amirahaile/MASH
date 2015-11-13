@@ -15,7 +15,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var bottomLabel: UILabel!
     @IBOutlet weak var leftLabel: UILabel!
 
-    
+    @IBOutlet weak var mashM: UILabel!
+    @IBOutlet weak var mashA: UILabel!
+    @IBOutlet weak var mashS: UILabel!
+    @IBOutlet weak var mashH: UILabel!
+   
     // Text fields
     @IBOutlet weak var rInputOne: UITextField!
     @IBOutlet weak var rInputTwo: UITextField!
@@ -86,6 +90,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBAction func stopRandomizeMagicNum(sender: AnyObject) {
         self.timer?.invalidate()
+        highlightStartingPosition()
     }
     
     func createTimerForRandomNum() {
@@ -95,6 +100,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func setRandomNumber() {
         magicNum = Int(arc4random_uniform(8)) + 1
         self.magicNumBtn.setTitle(String(magicNum), forState: .Normal)
+    }
+    
+    
+    func highlightStartingPosition() {
+        mashM.layer.borderColor = UIColor.blueColor().CGColor
+        mashM.layer.borderWidth = 2.0
     }
 
     
