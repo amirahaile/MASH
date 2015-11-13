@@ -132,7 +132,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func highlightCount() {
         currentElement = self.elements[indexCount]
         highlightElement(currentElement!)
-        if previousElement != nil { unhighlightElement(previousElement!)}
+        if previousElement != nil && self.elements.contains(previousElement!) {
+            unhighlightElement(previousElement!)
+        }
         previousElement = currentElement
         if rotationCount == magicNum - 1 {
             highlightTimer?.invalidate()
@@ -151,7 +153,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if element is UILabel {
             element.layer.backgroundColor = UIColor.grayColor().CGColor
         } else if element is UITextField {
-//            element.userInteractionEnabled = false
             element.layer.borderColor = UIColor.grayColor().CGColor
         }
         self.elements.removeAtIndex(elementIndex!)
