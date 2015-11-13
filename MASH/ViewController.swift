@@ -138,6 +138,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
             highlightTimer?.invalidate()
         }
         indexCount++
+        // test commit 
     }
 
 }
