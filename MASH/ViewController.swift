@@ -50,6 +50,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var currentElement: UIView?
     var previousElement: UIView?
     var indexCount: Int = 0
+    var rotationCount: Int = 0
     
     // METHODS //
     
@@ -121,11 +122,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func createInputArray() {
-        self.elements = [mashM, mashA, mashS, mashH, rInputOne, rInputTwo, rInputThree, rInputFour, bInputOne, bInputTwo, bInputThree, bInputFour, lInputOne, lInputTwo, lInputThree, lInputFour]
+        self.elements = [mashM, mashA, mashS, mashH, rInputOne, rInputTwo, rInputThree, rInputFour, bInputOne, bInputTwo, bInputThree, bInputFour, lInputFour, lInputThree, lInputTwo, lInputOne]
     }
     
     func createTimerForHighlighting() {
-        indexCount = 0
         highlightTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "highlightCount", userInfo: nil, repeats: true)
     }
     
@@ -134,19 +134,24 @@ class ViewController: UIViewController, UITextFieldDelegate {
         highlightElement(currentElement!)
         if previousElement != nil { unhighlightElement(previousElement!)}
         previousElement = currentElement
-        if indexCount == magicNum - 1 {
+        if rotationCount == magicNum - 1 {
             highlightTimer?.invalidate()
             crossOutElement(currentElement!)
-            print(currentElement)
+            rotationCount = 0
+            indexCount--
+            createTimerForHighlighting()
+        } else {
+            rotationCount++
         }
-        indexCount++
+         indexCount++
     }
     
     func crossOutElement(element: UIView) {
-        var elementIndex = self.elements.indexOf(element)
+        let elementIndex = self.elements.indexOf(element)
         if element is UILabel {
             element.layer.backgroundColor = UIColor.grayColor().CGColor
         } else if element is UITextField {
+//            element.userInteractionEnabled = false
             element.layer.borderColor = UIColor.grayColor().CGColor
         }
         self.elements.removeAtIndex(elementIndex!)

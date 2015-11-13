@@ -91,7 +91,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Language 3" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U5q-TC-lhS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Language 4" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="U5q-TC-lhS">
                                 <rect key="frame" x="14" y="219" width="97" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -196,8 +196,8 @@
                         <outlet property="bottomLabel" destination="36D-Cr-N83" id="5nb-XM-HZg"/>
                         <outlet property="lInputFour" destination="U5q-TC-lhS" id="cGR-Uh-YwL"/>
                         <outlet property="lInputOne" destination="Z6l-d0-YGv" id="jGv-zO-PNz"/>
-                        <outlet property="lInputThree" destination="U5q-TC-lhS" id="aUy-xn-hve"/>
-                        <outlet property="lInputTwo" destination="oT6-GF-Ok3" id="F8y-qz-ONN"/>
+                        <outlet property="lInputThree" destination="oT6-GF-Ok3" id="wSI-ge-hG5"/>
+                        <outlet property="lInputTwo" destination="4zM-TO-jWP" id="gYb-XX-idh"/>
                         <outlet property="leftLabel" destination="9NG-7f-n5o" id="SeE-W3-Wqd"/>
                         <outlet property="magicNumBtn" destination="blM-Go-Ash" id="3TW-VB-kzr"/>
                         <outlet property="mashA" destination="0cr-j9-Wr7" id="YzU-FA-itp"/>
