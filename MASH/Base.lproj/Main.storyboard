@@ -326,7 +326,7 @@
                         <outlet property="lInputThree" destination="oT6-GF-Ok3" id="mVA-rb-7Fn"/>
                         <outlet property="lInputTwo" destination="4zM-TO-jWP" id="TXA-a3-R2I"/>
                         <outlet property="leftLabel" destination="9NG-7f-n5o" id="SeE-W3-Wqd"/>
-                        <outlet property="magicNum" destination="blM-Go-Ash" id="Csh-05-09E"/>
+                        <outlet property="magicNumBtn" destination="blM-Go-Ash" id="3TW-VB-kzr"/>
                         <outlet property="rInputFour" destination="Bg9-lv-5J2" id="29d-8I-QGH"/>
                         <outlet property="rInputOne" destination="yob-IY-wjC" id="wf3-Ck-fO7"/>
                         <outlet property="rInputThree" destination="2FW-hK-Nno" id="Wci-6D-p9A"/>

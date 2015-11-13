@@ -31,6 +31,8 @@ class TraditionalViewController: UIViewController {
     
     let dot : UIView = UIView()
     
+    // METHODS //
+    
     func configDot() {
         self.dot.translatesAutoresizingMaskIntoConstraints = false
         self.dot.backgroundColor = UIColor.blackColor()
