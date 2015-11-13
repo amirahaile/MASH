@@ -136,9 +136,20 @@ class ViewController: UIViewController, UITextFieldDelegate {
         previousElement = currentElement
         if indexCount == magicNum - 1 {
             highlightTimer?.invalidate()
+            crossOutElement(currentElement!)
+            print(currentElement)
         }
         indexCount++
-        // test commit 
+    }
+    
+    func crossOutElement(element: UIView) {
+        var elementIndex = self.elements.indexOf(element)
+        if element is UILabel {
+            element.layer.backgroundColor = UIColor.grayColor().CGColor
+        } else if element is UITextField {
+            element.layer.borderColor = UIColor.grayColor().CGColor
+        }
+        self.elements.removeAtIndex(elementIndex!)
     }
 
 }
