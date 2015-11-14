@@ -34,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		91B20EF41BF6AA2700D52B14 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		BD864EC31BEBE69200614508 /* MASH.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MASH.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD864EC61BEBE69200614508 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD864EC81BEBE69200614508 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -103,6 +104,7 @@
 				BD864ECD1BEBE69200614508 /* Assets.xcassets */,
 				BD864ECF1BEBE69200614508 /* LaunchScreen.storyboard */,
 				BD864ED21BEBE69200614508 /* Info.plist */,
+				91B20EF41BF6AA2700D52B14 /* MyPlayground.playground */,
 			);
 			path = MASH;
 			sourceTree = "<group>";

@@ -38,6 +38,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     
     // Elements Array
     var elements = [UIView]()
+    var categories = [String: Array<UIView>]()
     
     // Magic number
     @IBOutlet weak var magicNumBtn: UIButton!
@@ -75,6 +76,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         self.lInputOne.delegate = self
         self.configDot()
         self.createInputArray()
+        self.createInputDictionary()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
@@ -121,15 +123,49 @@ class ViewController: UIViewController, UITextFieldDelegate {
         element.layer.borderWidth = 0.0
     }
     
+    func highlightWinningElement(element: UIView) {
+        element.layer.borderColor = UIColor.greenColor().CGColor
+        element.layer.borderWidth = 5.0
+    }
+    
     func createInputArray() {
         self.elements = [mashM, mashA, mashS, mashH, rInputOne, rInputTwo, rInputThree, rInputFour, bInputOne, bInputTwo, bInputThree, bInputFour, lInputFour, lInputThree, lInputTwo, lInputOne]
+    }
+    
+    func createInputDictionary() {
+        self.categories = ["mash": [mashM, mashA, mashS, mashH], "right": [rInputOne, rInputTwo, rInputThree, rInputFour], "bottom": [bInputOne, bInputTwo, bInputThree, bInputFour], "left": [lInputFour, lInputThree, lInputTwo, lInputOne]]
     }
     
     func createTimerForHighlighting() {
         highlightTimer = NSTimer.scheduledTimerWithTimeInterval(0.5, target: self, selector: "highlightCount", userInfo: nil, repeats: true)
     }
     
+    func deleteElementFromDictionary(element: UIView){
+        // delete to keep dictionary updated and check to make sure each category has 1 element
+        for (category, uiViewElements) in categories {
+            // if only 1 element, remove key/value pair from dictionary and highlight last element
+            if uiViewElements.contains(element) && uiViewElements.count >= 1 {
+                let index = uiViewElements.indexOf(element)
+                var newArray = uiViewElements
+                if newArray.count == 1 {
+                    let arrayIndex = elements.indexOf(element)
+                    elements.removeAtIndex(arrayIndex!)
+                    highlightWinningElement(element)
+                    categories[category] = nil
+                } else {
+                    newArray.removeAtIndex(index!)
+                    categories[category] = newArray
+                }
+            }
+        }
+    }
+    
+    func isGameOver() {
+        if categories.isEmpty { highlightTimer?.invalidate() }
+    }
+    
     func highlightCount() {
+        isGameOver()
         if indexCount == self.elements.count { indexCount = 0 }
         currentElement = self.elements[indexCount]
         highlightElement(currentElement!)
@@ -140,6 +176,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         if rotationCount == magicNum - 1 {
             highlightTimer?.invalidate()
             crossOutElement(currentElement!)
+            deleteElementFromDictionary(currentElement!)
             rotationCount = 0
             indexCount--
             createTimerForHighlighting()
