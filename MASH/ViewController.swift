@@ -175,6 +175,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
         self.elements.removeAtIndex(elementIndex!)
     }
+    
+    func resetGameState() {
+        createInputArray()
+        createInputDictionary()
+    }
 
 }
 
