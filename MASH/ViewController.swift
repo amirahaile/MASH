@@ -148,8 +148,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 let index = uiViewElements.indexOf(element)
                 var newArray = uiViewElements
                 if newArray.count == 1 {
-                    let arrayIndex = elements.indexOf(element)
-                    elements.removeAtIndex(arrayIndex!)
                     highlightWinningElement(element)
                     categories[category] = nil
                 } else {
@@ -160,12 +158,17 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
     
-    func isGameOver() {
-        if categories.isEmpty { highlightTimer?.invalidate() }
+    func isGameOver()->Bool {
+        if categories.isEmpty {
+            highlightTimer?.invalidate()
+            return true
+        } else {
+            return false
+        }
     }
     
     func highlightCount() {
-        isGameOver()
+        if isGameOver() {return}
         if indexCount == self.elements.count { indexCount = 0 }
         currentElement = self.elements[indexCount]
         highlightElement(currentElement!)
