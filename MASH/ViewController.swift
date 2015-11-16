@@ -36,6 +36,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var lInputThree: UITextField!
     @IBOutlet weak var lInputFour: UITextField!
     
+
     // Elements Array
     var elements = [UIView]()
     var categories = [String: Array<UIView>]()
@@ -179,6 +180,19 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func resetGameState() {
         createInputArray()
         createInputDictionary()
+    }
+    
+    @IBAction func restartGame(sender: AnyObject) {
+        resetGameState()
+        self.magicNumBtn.setTitle("Magic Number", forState: .Normal)
+        self.highlightTimer?.invalidate()
+        self.timer?.invalidate()
+        for element in self.elements {
+            if element is UITextField {
+                (element as! UITextField).text = ""
+                unhighlightElement(element)
+            }
+        }
     }
 
 }

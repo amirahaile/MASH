@@ -28,9 +28,12 @@ class MASHUITests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testMagicButtonGeneratesNum() {
+        let magicButton = XCUIApplication().buttons["Magic Number"]
+        let title = magicButton.label
+        XCUIApplication().buttons["Magic Number"].tap()
+        let afterTitle = magicButton.label
+        XCTAssertFalse(magicButton.label == "Magic Number")
     }
     
 }
