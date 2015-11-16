@@ -45,7 +45,6 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var magicNum: Int = 0
     var findingMagicNum: Bool = false
 
-    let dot : UIView = UIView()
     var timer: NSTimer?
     var highlightTimer: NSTimer?
     var currentElement: UIView?
@@ -54,34 +53,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var rotationCount: Int = 0
     
     // METHODS //
-    
-    func configDot() {
-        self.dot.translatesAutoresizingMaskIntoConstraints = false
-        self.dot.backgroundColor = UIColor.blackColor()
-        self.view.addSubview(dot)
-        self.view.addConstraints( NSLayoutConstraint.constraintsWithVisualFormat("V:[dot(==25)]", options: .DirectionLeftToRight, metrics: nil, views: ["dot" : self.dot])
-        )
-        self.view.addConstraints( NSLayoutConstraint.constraintsWithVisualFormat("H:[lInputOne]-[dot(==25)]", options: .DirectionLeftToRight, metrics: nil, views: ["dot" : self.dot, "lInputOne" : self.lInputOne])
-        )
-        self.view.addConstraint( NSLayoutConstraint.init(item: dot, attribute: .CenterY, relatedBy: .Equal, toItem: self.lInputOne, attribute: .CenterY, multiplier: 1, constant: 0))
-    
-    }
-    
-    override func viewDidLayoutSubviews() {
-        self.dot.layer.cornerRadius = self.dot.bounds.width / 2
-    }
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.lInputOne.delegate = self
-        self.configDot()
         self.createInputArray()
         self.createInputDictionary()
-        // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    func textFieldDidEndEditing(textField: UITextField) {
-        debugPrint(textField.text)
     }
     
     // Traditional mode
